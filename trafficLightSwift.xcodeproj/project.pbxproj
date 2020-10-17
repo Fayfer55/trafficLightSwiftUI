@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		852BC629253880880060ABB6 /* trafficLightSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC628253880880060ABB6 /* trafficLightSwiftApp.swift */; };
-		852BC62B253880880060ABB6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC62A253880880060ABB6 /* ContentView.swift */; };
+		852BC62B253880880060ABB6 /* TrafficLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC62A253880880060ABB6 /* TrafficLights.swift */; };
 		852BC62D2538808B0060ABB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852BC62C2538808B0060ABB6 /* Assets.xcassets */; };
 		852BC6302538808B0060ABB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852BC62F2538808B0060ABB6 /* Preview Assets.xcassets */; };
+		852BC639253880D00060ABB6 /* TrafficColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC638253880D00060ABB6 /* TrafficColor.swift */; };
+		852BC63C25388F190060ABB6 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC63B25388F190060ABB6 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		852BC625253880880060ABB6 /* trafficLightSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trafficLightSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852BC628253880880060ABB6 /* trafficLightSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trafficLightSwiftApp.swift; sourceTree = "<group>"; };
-		852BC62A253880880060ABB6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		852BC62A253880880060ABB6 /* TrafficLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLights.swift; sourceTree = "<group>"; };
 		852BC62C2538808B0060ABB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		852BC62F2538808B0060ABB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		852BC6312538808B0060ABB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		852BC638253880D00060ABB6 /* TrafficColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficColor.swift; sourceTree = "<group>"; };
+		852BC63B25388F190060ABB6 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				852BC628253880880060ABB6 /* trafficLightSwiftApp.swift */,
-				852BC62A253880880060ABB6 /* ContentView.swift */,
+				852BC62A253880880060ABB6 /* TrafficLights.swift */,
+				852BC63B25388F190060ABB6 /* ButtonView.swift */,
+				852BC638253880D00060ABB6 /* TrafficColor.swift */,
 				852BC62C2538808B0060ABB6 /* Assets.xcassets */,
 				852BC6312538808B0060ABB6 /* Info.plist */,
 				852BC62E2538808B0060ABB6 /* Preview Content */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				852BC62B253880880060ABB6 /* ContentView.swift in Sources */,
+				852BC62B253880880060ABB6 /* TrafficLights.swift in Sources */,
+				852BC639253880D00060ABB6 /* TrafficColor.swift in Sources */,
+				852BC63C25388F190060ABB6 /* ButtonView.swift in Sources */,
 				852BC629253880880060ABB6 /* trafficLightSwiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
