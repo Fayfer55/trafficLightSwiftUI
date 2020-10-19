@@ -8,53 +8,48 @@
 import SwiftUI
 
 struct TrafficLights: View {
-    @State var traffic = ButtonView()
-    
-    @State var red = TrafficColor(color: .red)
-    @State var yellow = TrafficColor(color: .yellow)
-    @State var green = TrafficColor(color: .green)
-    
     @State private var currentColor = "red"
     
+    @State private var redLightState = 0.3
+    @State private var yellowLightState = 0.3
+    @State private var greenLightState = 0.3
+    
+    @State private var buttonTitle = "Start"
     
     var body: some View {
         ZStack {
             Color(.black)
                .ignoresSafeArea()
             VStack {
-                red
-                yellow
-                green
+                TrafficColor(opacity: redLightState, color: .red)
+                TrafficColor(opacity: yellowLightState, color: .yellow)
+                TrafficColor(opacity: greenLightState, color: .green)
                 
                 Spacer()
                 
-                Button(action: { trafficAction() }) {
-                    traffic
-                }
+                ButtonView(buttonTitle: buttonTitle, action: { trafficAction() })
                 .padding()
             }
         }
     }
     
     private func trafficAction() {
-        traffic.buttonText = "Next"
+        buttonTitle = "Next"
         
         switch currentColor {
         case "red":
-            green.contrastNumber = 0.3
-            red.contrastNumber = 1.0
+            greenLightState = 0.3
+            redLightState = 1
             currentColor = "yellow"
         case "yellow":
-            red.contrastNumber = 0.3
-            yellow.contrastNumber = 1
+            redLightState = 0.3
+            yellowLightState = 1
             currentColor = "green"
         default:
-            yellow.contrastNumber = 0.3
-            green.contrastNumber = 1
+            yellowLightState = 0.3
+            greenLightState = 1
             currentColor = "red"
         }
-        
-        
     }
 }
 

@@ -8,28 +8,30 @@
 import SwiftUI
 
 struct ButtonView: View {
-    var buttonText = "Start"
+    let buttonTitle: String
+    let action: () -> Void
     
     var body: some View {
-        ZStack {
-            Color(.blue)
-                .clipShape(RoundedRectangle(cornerRadius: 23))
-                .frame(width: 170, height: 70, alignment: .center)
-                .overlay(RoundedRectangle(
-                            cornerRadius: 23)
-                            .stroke(lineWidth: 4)
-                            .foregroundColor(.white)
-                )
-        Text(buttonText)
-            .font(.title).bold()
-            .accentColor(.white)
+        Button(action: action) {
+            ZStack {
+                Color(.blue)
+                    .clipShape(RoundedRectangle(cornerRadius: 23))
+                    .frame(width: 170, height: 70, alignment: .center)
+                    .overlay(RoundedRectangle(
+                                cornerRadius: 23)
+                                .stroke(lineWidth: 4)
+                                .foregroundColor(.white)
+                    )
+                Text(buttonTitle)
+                    .font(.title).bold()
+                    .accentColor(.white)
+            }
         }
-        
     }
 }
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView()
+        ButtonView(buttonTitle: "Start", action: {})
     }
 }
